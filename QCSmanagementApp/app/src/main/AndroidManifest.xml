@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".Account.RegisterActivity"/>
         <activity android:name=".MenuActivity"/>
+        <activity android:name=".DeviceInformation"/>
+        <activity android:name=".RetrievingDeviceInfo"/>
     </application>
 
 </manifest>
