@@ -18,7 +18,7 @@
 
     <!-- loading messages -->
 
-    <string name="loading_register">Sending registration requestâ€¦</string>
+    <string name="loading_register">Sending registration request¦</string>
     <string name="loading_login">Verification¦</string>
 
 </resources>
