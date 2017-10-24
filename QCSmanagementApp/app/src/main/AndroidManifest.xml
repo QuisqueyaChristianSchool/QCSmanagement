@@ -21,7 +21,8 @@
         <activity android:name=".Account.RegisterActivity"/>
         <activity android:name=".MenuActivity"/>
         <activity android:name=".DeviceInformation"/>
-        <activity android:name=".RetrievingDeviceInfo"/>
+        <activity android:name=".Intervention"/>
+        <activity android:name=".DeviceActivity"/>
     </application>
 
 </manifest>

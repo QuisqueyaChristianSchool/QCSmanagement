@@ -9,55 +9,32 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.backendless.Backendless;
+import com.backendless.BackendlessUser;
+import com.backendless.async.callback.AsyncCallback;
+
 /**
  * Created by hphanor on 10/23/2017.
  */
 
 public class DeviceInformation extends AppCompatActivity {
-
-    Button Save; Button Show;
-    EditText Firstname; EditText Lastname;
-    EditText Email; EditText Phone;
-    EditText Hostname; EditText WirelessMAC;
-    EditText WirelessIP; EditText WiredMAC;
-    EditText WiredIP; EditText Date;
-    EditText Building; EditText Room;
+    Button View;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_information);
-
         //Using a custom toolbar instead of having the same title on each page
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar_device_information);
 
-        Save = (Button) findViewById(R.id.btnSave); Show = (Button) findViewById(R.id.btnShow);
-        Firstname = (EditText) findViewById(R.id.etFirstname); Lastname = (EditText) findViewById(R.id.etLastname);
-        Email = (EditText) findViewById(R.id.etEmail); Phone = (EditText) findViewById(R.id.etPhone);
-        Hostname = (EditText) findViewById(R.id.etHostname); WirelessMAC = (EditText) findViewById(R.id.etWirelessMAC);
-        WirelessIP = (EditText) findViewById(R.id.etWirelessIP); WiredMAC = (EditText) findViewById(R.id.etWiredMAC);
-        WiredIP = (EditText) findViewById(R.id.etWiredIP); Date = (EditText) findViewById(R.id.etDate);
-        Building = (EditText) findViewById(R.id.etBuilding); Room = (EditText) findViewById(R.id.etBuilding);
-        Show.setOnClickListener(new View.OnClickListener(){
+        View = (Button) findViewById(R.id.btnView);
+        View.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 //Open new activity using intent
-                Intent intent = new Intent(DeviceInformation.this, RetrievingDeviceInfo.class);
+                Intent intent = new Intent(DeviceInformation.this, DeviceActivity.class);
                 startActivity(intent);
-
-                //Saving the information from all edittext
-                //String str = Firstname.getText().toString();
-
-            }
-
-        });
-
-        Save.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                //Show successful test
-                Toast.makeText(DeviceInformation.this, "Information Saved", Toast.LENGTH_LONG).show();
 
             }
 
