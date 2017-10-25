@@ -33,9 +33,7 @@ public class DeviceActivity extends AppCompatActivity {
     ProgressDialog progress;
     public static final String AplicationID = "6F3C8813-A0FC-71E2-FFCA-B5D5CDC6E200";
     public static final String SecretKey = "9D7A1A98-8D7D-9B52-FF75-EEBBCFB18A00";
-
     private devices device;
-
     public ArrayList<devices> listDevice;
     public ListView lvdevice;
     public Listviewdevice adapterDevice;
@@ -45,18 +43,13 @@ public class DeviceActivity extends AppCompatActivity {
         setContentView(R.layout.device_listview);
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 
-
         lvdevice = (ListView) findViewById(R.id.lvdevice);
         listDevice = new ArrayList<>();
         adapterDevice = new Listviewdevice(this, listDevice);
 
         lvdevice.setAdapter(adapterDevice);
-
         IDataStore<Map> devicesStorage = Backendless.Data.of("devices");
-
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
-
-        queryBuilder.setWhereClause("id_categorie='EDDE2B68-53E6-FE35-FFDF-A555E20A9800'");
         setloading();
         devicesStorage.find(queryBuilder, new AsyncCallback<List<Map>>()
 
@@ -94,14 +87,10 @@ public class DeviceActivity extends AppCompatActivity {
         adapterDevice = new Listviewdevice(this, listDevice);
 
         lvdevice.setAdapter(adapterDevice);
-        IDataStore<Map> recettesStorage = Backendless.Data.of( "devices" );
-
-
+        IDataStore<Map> devicesStorage = Backendless.Data.of( "devices" );
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
-
         queryBuilder.setWhereClause("firstname like'%"+query+"%'");
-
-        recettesStorage.find(queryBuilder,new AsyncCallback<List<Map>>()
+        devicesStorage.find(queryBuilder,new AsyncCallback<List<Map>>()
 
         {
 
@@ -128,12 +117,8 @@ public class DeviceActivity extends AppCompatActivity {
 
     public void setloading(){
         progress = new ProgressDialog(this);
-        // progress.setTitle("Loading");
-        progress.setMessage("Chargement...");
-        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+        progress.setMessage("Loading all device information...");
+        progress.setCancelable(false);
         progress.show();
-
     }
-
-
 }

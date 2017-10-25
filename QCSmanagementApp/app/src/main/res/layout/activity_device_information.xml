@@ -164,7 +164,7 @@
             android:layout_below="@+id/textView7">
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/radioButtonPC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -172,7 +172,7 @@
                 android:textSize="12sp" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioButtonMacBook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -180,7 +180,7 @@
                 android:textSize="12sp" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/radioButtonIpad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -188,7 +188,7 @@
                 android:textSize="12sp" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioButtonIphone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -196,7 +196,7 @@
                 android:textSize="12sp" />
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radioButtonAndroid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -223,7 +223,7 @@
             android:layout_alignTop="@+id/RadioGroupType">
 
             <RadioButton
-                android:id="@+id/radioButton7"
+                android:id="@+id/radioButtonMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -231,7 +231,7 @@
                 android:textSize="12sp" />
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/radioButtonQCS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

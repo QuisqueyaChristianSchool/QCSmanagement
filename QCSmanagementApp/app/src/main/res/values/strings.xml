@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QCS Management</string>
+    <string name="app_name">QCS - IT Management</string>
     <string name="warning_name_empty">Name cannot be empty</string>
     <string name="warning_name_lowercase">Name should start from an uppercase letter</string>
     <string name="warning_email_empty">Email cannot be empty</string>
