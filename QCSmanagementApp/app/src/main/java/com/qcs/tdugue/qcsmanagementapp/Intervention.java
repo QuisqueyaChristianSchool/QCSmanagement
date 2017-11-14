@@ -13,7 +13,6 @@ public class Intervention extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intervention);
-
         Toast.makeText(Intervention.this, "INTERVENTION", Toast.LENGTH_LONG).show();
     }
 }

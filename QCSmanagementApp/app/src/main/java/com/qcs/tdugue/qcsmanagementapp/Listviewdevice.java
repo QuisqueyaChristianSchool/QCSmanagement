@@ -1,18 +1,18 @@
 package com.qcs.tdugue.qcsmanagementapp;
-
+import android.content.Intent;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
-import com.qcs.tdugue.qcsmanagementapp.devices;
-import com.qcs.tdugue.qcsmanagementapp.R;
-import static com.qcs.tdugue.qcsmanagementapp.R.*;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 /**
- * Created by hphanor on 10/24/2017.
+ * Created by tdugue on 10/24/2017.
  */
 
 public class Listviewdevice extends ArrayAdapter<devices> {
@@ -34,7 +34,9 @@ public class Listviewdevice extends ArrayAdapter<devices> {
     }
     public Listviewdevice(Context context, ArrayList<devices> deviceinfo) {
         super(context, R.layout.device_layout, deviceinfo);
+
     }
+    Button Share;
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         devices r = getItem(position);
@@ -77,7 +79,6 @@ public class Listviewdevice extends ArrayAdapter<devices> {
         viewHolder.textmacwireless.setText(r.getMacwireless());
         viewHolder.textphone.setText(r.getPhone());
         viewHolder.textroom.setText(r.getRoom());
-
         return convertView;
     }
 }

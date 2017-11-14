@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -42,11 +44,9 @@ public class DeviceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.device_listview);
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
-
         lvdevice = (ListView) findViewById(R.id.lvdevice);
         listDevice = new ArrayList<>();
         adapterDevice = new Listviewdevice(this, listDevice);
-
         lvdevice.setAdapter(adapterDevice);
         IDataStore<Map> devicesStorage = Backendless.Data.of("devices");
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
@@ -85,7 +85,6 @@ public class DeviceActivity extends AppCompatActivity {
         lvdevice = (ListView) findViewById(R.id.lvdevice);
         listDevice = new ArrayList<>();
         adapterDevice = new Listviewdevice(this, listDevice);
-
         lvdevice.setAdapter(adapterDevice);
         IDataStore<Map> devicesStorage = Backendless.Data.of( "devices" );
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();

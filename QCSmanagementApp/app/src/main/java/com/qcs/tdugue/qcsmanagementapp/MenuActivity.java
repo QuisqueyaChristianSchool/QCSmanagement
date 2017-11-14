@@ -20,23 +20,22 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
         lv = (ListView) findViewById(R.id.lvMenu);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
-            @Override
-            public void onItemClick (AdapterView<?> parent, View view, int position, long id)
-            {
-                if (position==0){
-                    Intent myintent = new Intent(view.getContext(),DeviceInformation.class);
-                startActivityForResult(myintent,0);
-                }
-                if (position==1){
-                    Intent myintent = new Intent(view.getContext(),Intervention.class);
-                    startActivityForResult(myintent,1);
-                }
+                @Override
+                public void onItemClick (AdapterView<?> parent, View view, int position, long id)
+                {
+                    if (position==0){
+                        Intent myintent = new Intent(view.getContext(),DeviceInformation.class);
+                        startActivityForResult(myintent,0);
+                    }
+                    if (position==1){
+                        Intent myintent = new Intent(view.getContext(),Intervention.class);
+                        startActivityForResult(myintent,1);
+                    }
 
             }
         });
