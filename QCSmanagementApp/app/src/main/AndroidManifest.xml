@@ -22,6 +22,8 @@
         <activity android:name=".MenuActivity"/>
         <activity android:name=".DeviceInformation"/>
         <activity android:name=".Intervention"/>
+        <activity android:name=".DeviceOptions"/>
+        <activity android:name=".DetailsActivity"/>
         <activity android:name=".DeviceActivity"/>
     </application>
 

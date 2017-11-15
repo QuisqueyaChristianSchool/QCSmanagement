@@ -360,21 +360,10 @@
             android:id="@+id/btnSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:text="Save"
-            android:layout_below="@+id/etWiredIP"
-            android:layout_toLeftOf="@+id/btnView"
-            android:layout_toStartOf="@+id/btnView" />
-
-        <Button
-            android:id="@+id/btnView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View"
-            android:layout_below="@+id/etWiredIP"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/RadioGroupBelongs"
+            android:layout_toRightOf="@+id/RadioGroupBelongs"
+            android:text="Save" />
 
 
     </RelativeLayout>

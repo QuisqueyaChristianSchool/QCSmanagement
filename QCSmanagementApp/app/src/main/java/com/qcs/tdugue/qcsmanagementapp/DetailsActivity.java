@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import butterknife.ButterKnife;
+import com.backendless.Backendless;
 /**
  * Created by hphanor on 11/14/2017.
  */
@@ -38,37 +39,51 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+
         device = (devices) getIntent().getSerializableExtra("devices");
 
         //retrieve all fields and set their value
 
-        textdate = (TextView) findViewById(R.id.tvdate);
+        textdate = ButterKnife.findById(this, R.id.tvdate);
         textdate.setText(device.getDateinformation());
-        textbelongs = (TextView) findViewById(R.id.tvbelong);
+
+        textbelongs = ButterKnife.findById(this,R.id.tvbelong);
         textbelongs.setText(device.getBelongs());
-        textbuilding = (TextView) findViewById(R.id.tvbuilding);
+
+        textbuilding = ButterKnife.findById(this,R.id.tvbuilding);
         textbuilding.setText(device.getBuilding());
-        textdevicetype = (TextView)findViewById(R.id.tvdevicetype);
+
+        textdevicetype = ButterKnife.findById(this,R.id.tvdevicetype);
         textdevicetype.setText(device.getDevicetype());
-        textdevicename = (TextView) findViewById(R.id.tvdevicename);
+
+        textdevicename = ButterKnife.findById(this,R.id.tvdevicename);
         textdevicename.setText(device.getDevicename());
-        textemail = (TextView) findViewById(R.id.tvemail);
+
+        textemail = ButterKnife.findById(this,R.id.tvemail);
         textemail.setText(device.getEmail1());
-        textfirstname = (TextView) findViewById(R.id.tvfirstname);
+
+        textfirstname = ButterKnife.findById(this,R.id.tvfirstname);
         textfirstname.setText(device.getFirstname());
-        textipwired = (TextView) findViewById(R.id.tvwiredip);
+
+        textipwired = ButterKnife.findById(this,R.id.tvwiredip);
         textipwired.setText(device.getIpwired());
-        textipwireless = (TextView) findViewById(R.id.tvwirelessip);
+
+        textipwireless = ButterKnife.findById(this,R.id.tvwirelessip);
         textipwireless.setText(device.getIpwireless());
-        textlastname = (TextView) findViewById(R.id.tvlastname);
+
+        textlastname = ButterKnife.findById(this,R.id.tvlastname);
         textlastname.setText(device.getLastname());
-        textmacwired = (TextView) findViewById(R.id.tvwiredmac);
+
+        textmacwired = ButterKnife.findById(this,R.id.tvwiredmac);
         textmacwired.setText(device.getMacwired());
-        textmacwireless = (TextView) findViewById(R.id.tvwirelessmac);
+
+        textmacwireless = ButterKnife.findById(this,R.id.tvwirelessmac);
         textmacwireless.setText(device.getMacwireless());
-        textphone = (TextView) findViewById(R.id.tvphone);
+
+        textphone = ButterKnife.findById(this,R.id.tvphone);
         textphone.setText(device.getPhone());
-        textroom = (TextView) findViewById(R.id.tvroom);
+
+        textroom = ButterKnife.findById(this,R.id.tvroom);
         textroom.setText(device.getRoom());
 
         final String text = device.getDateinformation()+ " " +device.getBelongs()+ " " +device.getBuilding()+ " " +device.getDevicetype()+ " " +device.getDevicename()+ " " +device.getEmail1()+ " " +device.getFirstname() + " " + device.getIpwired()+ " " + device.getIpwireless() + " " + device.getLastname() + " " + device.getMacwired() + " " + device.getMacwireless() + " " + device.getPhone()+ " " + device.getRoom();
@@ -78,7 +93,7 @@ public class DetailsActivity extends AppCompatActivity {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT,
-                        text + "" + "Pour plus de recettes: https://play.google.com/store/apps/details?id=com.google.android.apps.plus");
+                        text + "" + "For more information contact QCS ITsupport");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
             }
