@@ -35,7 +35,8 @@ public class DeviceActivity extends AppCompatActivity {
     ProgressDialog progress;
     public static final String AplicationID = "6F3C8813-A0FC-71E2-FFCA-B5D5CDC6E200";
     public static final String SecretKey = "9D7A1A98-8D7D-9B52-FF75-EEBBCFB18A00";
-    private devices device;
+
+
     public ArrayList<devices> listDevice;
     public ListView lvdevice;
     public Listviewdevice adapterDevice;
@@ -43,6 +44,7 @@ public class DeviceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.device_listview);
+
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
         lvdevice = (ListView) findViewById(R.id.lvdevice);
         listDevice = new ArrayList<>();
@@ -75,13 +77,29 @@ public class DeviceActivity extends AppCompatActivity {
             }
         });
 
+        lvdevice.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //view is an instance of MovieView
+                //Expose details of movie (ratings (out of 10), popularity, and synopsis
+                //ratings using RatingBar
+                devices device = listDevice.get(position);
+
+                Intent intent = new Intent(DeviceActivity.this, DetailsActivity.class);
+                intent.putExtra("devices", device);
+                startActivity(intent);
+
+            }
+        });
+
 
     }
 
 
 
 
-    private void fetchmeat(String query) {
+    private void fetchdevice(String query) {
         lvdevice = (ListView) findViewById(R.id.lvdevice);
         listDevice = new ArrayList<>();
         adapterDevice = new Listviewdevice(this, listDevice);

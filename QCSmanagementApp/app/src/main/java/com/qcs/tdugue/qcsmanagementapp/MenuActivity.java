@@ -29,7 +29,7 @@ public class MenuActivity extends AppCompatActivity {
                 public void onItemClick (AdapterView<?> parent, View view, int position, long id)
                 {
                     if (position==0){
-                        Intent myintent = new Intent(view.getContext(),DeviceInformation.class);
+                        Intent myintent = new Intent(view.getContext(),DeviceOptions.class);
                         startActivityForResult(myintent,0);
                     }
                     if (position==1){
