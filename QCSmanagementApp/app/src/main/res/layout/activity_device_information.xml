@@ -361,8 +361,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/RadioGroupBelongs"
-            android:layout_toRightOf="@+id/RadioGroupBelongs"
+            android:layout_toLeftOf="@+id/RadioGroupBelongs"
+            android:layout_toStartOf="@+id/RadioGroupBelongs"
             android:text="Save" />
 
 

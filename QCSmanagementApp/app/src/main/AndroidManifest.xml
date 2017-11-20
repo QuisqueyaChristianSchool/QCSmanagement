@@ -21,10 +21,11 @@
         <activity android:name=".Account.RegisterActivity"/>
         <activity android:name=".MenuActivity"/>
         <activity android:name=".DeviceInformation"/>
-        <activity android:name=".Intervention"/>
+        <activity android:name=".interventions"/>
         <activity android:name=".DeviceOptions"/>
-        <activity android:name=".DetailsActivity"/>
+        <activity android:name=".DetailsDeviceActivity"/>
         <activity android:name=".DeviceActivity"/>
+        <activity android:name=".InterventionActivity"/>
     </application>
 
 </manifest>

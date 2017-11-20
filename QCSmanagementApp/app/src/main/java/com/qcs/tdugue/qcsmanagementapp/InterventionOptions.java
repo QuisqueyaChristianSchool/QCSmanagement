@@ -7,37 +7,37 @@ import android.view.View;
 import android.widget.Button;
 
 /**
- * Created by tdugue on 11/15/2017.
+ * Created by tdugue on 11/20/2017.
  */
 
-public class DeviceOptions extends AppCompatActivity {
+public class InterventionOptions extends AppCompatActivity {
 
-Button Adding;
-Button View;
+    Button Adding;
+    Button View;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_options);
+        setContentView(R.layout.activity_options1);
 
-        View = (Button) findViewById(R.id.btnView);
-        View.setOnClickListener(new View.OnClickListener() {
+        View = (Button) findViewById(R.id.btnView1);
+        View.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Open new activity using intent
-                Intent intent = new Intent(DeviceOptions.this, DeviceActivity.class);
+                Intent intent = new Intent(InterventionOptions.this, InterventionActivity.class);
                 startActivity(intent);
 
             }
 
         });
 
-        Adding = (Button) findViewById(R.id.btnAdd);
+        Adding = (Button) findViewById(R.id.btnAdd1);
         Adding.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Open new activity using intent
-                Intent intent = new Intent(DeviceOptions.this, DeviceInformation.class);
+                Intent intent = new Intent(InterventionOptions.this, InterventionInformation.class);
                 startActivity(intent);
 
             }

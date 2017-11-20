@@ -33,7 +33,7 @@ public class MenuActivity extends AppCompatActivity {
                         startActivityForResult(myintent,0);
                     }
                     if (position==1){
-                        Intent myintent = new Intent(view.getContext(),Intervention.class);
+                        Intent myintent = new Intent(view.getContext(),interventions.class);
                         startActivityForResult(myintent,1);
                     }
 

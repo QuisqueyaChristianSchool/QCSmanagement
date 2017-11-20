@@ -7,12 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import butterknife.ButterKnife;
-import com.backendless.Backendless;
+
 /**
  * Created by hphanor on 11/14/2017.
  */
 
-public class DetailsActivity extends AppCompatActivity {
+public class DetailsDeviceActivity extends AppCompatActivity {
 
     public static final String AplicationID = "6F3C8813-A0FC-71E2-FFCA-B5D5CDC6E200";
     public static final String SecretKey = "9D7A1A98-8D7D-9B52-FF75-EEBBCFB18A00";
@@ -38,7 +38,7 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+        setContentView(R.layout.activity_detailsdevice);
 
         device = (devices) getIntent().getSerializableExtra("devices");
 
@@ -86,14 +86,16 @@ public class DetailsActivity extends AppCompatActivity {
         textroom = ButterKnife.findById(this,R.id.tvroom);
         textroom.setText(device.getRoom());
 
-        final String text = device.getDateinformation()+ " " +device.getBelongs()+ " " +device.getBuilding()+ " " +device.getDevicetype()+ " " +device.getDevicename()+ " " +device.getEmail1()+ " " +device.getFirstname() + " " + device.getIpwired()+ " " + device.getIpwireless() + " " + device.getLastname() + " " + device.getMacwired() + " " + device.getMacwireless() + " " + device.getPhone()+ " " + device.getRoom();
+        final String text ="Date: "+ device.getDateinformation()+ "\n " +"Building name: "+device.getBuilding()+ "\n "+"Room: " + device.getRoom()+ "\n "+"Firstname: " +device.getFirstname()
+                + "\n " +"Lastname: "+ device.getLastname()+ "\n "+"Phone: " + device.getPhone()+ "\n"+"Email: " +device.getEmail1()+ "\n " +"Device Name: "+device.getDevicename()+"\n"+ "Belongs to: "+device.getBelongs()+ "\n " +"Device Type: "+device.getDevicetype()
+                + "\n " +"Physical address(Wireless): "+ device.getMacwireless()+ "\n "+"Assigned IP: " + device.getIpwireless()+ "\n "+"Physical address(Wired): " + device.getMacwired() + "\n " +"Assigned IP: "+ device.getIpwired() ;
+
         Share = (Button) findViewById(R.id.btnShare);
         Share.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT,
-                        text + "" + "For more information contact QCS ITsupport");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, text);
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
             }
