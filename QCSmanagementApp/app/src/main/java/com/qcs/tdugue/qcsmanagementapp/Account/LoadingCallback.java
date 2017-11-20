@@ -9,7 +9,7 @@ import com.qcs.tdugue.qcsmanagementapp.Account.DialogHelper;
 import com.qcs.tdugue.qcsmanagementapp.R;
 
 /**
- * Created by hphanor on 10/23/2017.
+ * Created by tdugue on 10/23/2017.
  */
 
 public class LoadingCallback  <T> implements AsyncCallback<T>

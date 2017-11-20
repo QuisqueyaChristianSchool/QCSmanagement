@@ -38,10 +38,10 @@ public class Listviewintervention extends ArrayAdapter<interventions> {
             convertView = inflater.inflate(R.layout.intervention_layout, parent, false);
 
             viewHolder.textdate = (TextView) convertView.findViewById(R.id.tvdate);
-            viewHolder.textitem = (TextView) convertView.findViewById(R.id.tvbelong);
-            viewHolder.textinitial = (TextView) convertView.findViewById(R.id.tvbuilding);
-            viewHolder.textproblem = (TextView) convertView.findViewById(R.id.tvdevicetype);
-            viewHolder.textstatus = (TextView) convertView.findViewById(R.id.tvdevicename);
+            viewHolder.textitem = (TextView) convertView.findViewById(R.id.tvitem);
+            viewHolder.textinitial = (TextView) convertView.findViewById(R.id.tvinitial);
+            viewHolder.textproblem = (TextView) convertView.findViewById(R.id.tvproblem);
+            viewHolder.textstatus = (TextView) convertView.findViewById(R.id.tvstatus);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (Listviewintervention.ViewHolder) convertView.getTag();

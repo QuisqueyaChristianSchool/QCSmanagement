@@ -7,7 +7,7 @@ import android.widget.Toast;
 import com.qcs.tdugue.qcsmanagementapp.R;
 
 /**
- * Created by hphanor on 10/23/2017.
+ * Created by tdugue on 10/23/2017.
  */
 
 public class Validator {

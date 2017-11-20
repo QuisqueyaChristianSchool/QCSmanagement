@@ -10,7 +10,7 @@
         android:layout_alignEnd="@+id/btnAdd1"
         android:layout_alignRight="@+id/btnAdd1"
         android:layout_below="@+id/textView18"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="45dp"
         android:text="View all interventions" />
 
     <Button

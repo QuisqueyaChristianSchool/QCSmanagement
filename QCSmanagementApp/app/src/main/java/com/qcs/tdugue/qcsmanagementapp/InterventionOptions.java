@@ -12,16 +12,16 @@ import android.widget.Button;
 
 public class InterventionOptions extends AppCompatActivity {
 
-    Button Adding;
-    Button View;
+    Button Adding1;
+    Button View1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options1);
 
-        View = (Button) findViewById(R.id.btnView1);
-        View.setOnClickListener(new android.view.View.OnClickListener() {
+        View1 = (Button) findViewById(R.id.btnView1);
+        View1.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Open new activity using intent
@@ -32,8 +32,8 @@ public class InterventionOptions extends AppCompatActivity {
 
         });
 
-        Adding = (Button) findViewById(R.id.btnAdd1);
-        Adding.setOnClickListener(new View.OnClickListener() {
+        Adding1= (Button) findViewById(R.id.btnAdd1);
+        Adding1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Open new activity using intent

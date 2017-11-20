@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardviewDeviceInformation"
+        android:id="@+id/cardviewInterventionInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -86,9 +86,10 @@
                 android:id="@+id/tvitem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/textView17"
-                android:layout_alignEnd="@+id/tvDate"
-                android:layout_alignRight="@+id/tvDate"
+                android:layout_alignBaseline="@+id/textView16"
+                android:layout_alignBottom="@+id/textView16"
+                android:layout_alignLeft="@+id/tvdate"
+                android:layout_alignStart="@+id/tvdate"
                 android:text="TextView" />
 
             <TextView

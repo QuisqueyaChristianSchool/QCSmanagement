@@ -47,7 +47,7 @@ public class interventions implements Serializable {
         ArrayList<interventions> intervention = new ArrayList();
         for(int i = 0; i < map.size(); i++) {
             interventions info1 = new interventions();
-            info1.setDate_information((String) map.get(i).get("dateinformation"));
+            info1.setDate_information((String) map.get(i).get("date_information"));
             info1.setItem((String) map.get(i).get("item"));
             info1.setInitial((String) map.get(i).get("initial"));
             info1.setProblem((String) map.get(i).get("problem"));

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.support.v7.app.AlertDialog;
 
 /**
- * Created by hphanor on 10/23/2017.
+ * Created by tdugue on 10/23/2017.
  */
 
 public class DialogHelper {

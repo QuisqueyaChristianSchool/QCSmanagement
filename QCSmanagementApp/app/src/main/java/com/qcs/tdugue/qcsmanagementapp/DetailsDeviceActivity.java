@@ -9,13 +9,10 @@ import android.widget.TextView;
 import butterknife.ButterKnife;
 
 /**
- * Created by hphanor on 11/14/2017.
+ * Created by tdugue on 11/14/2017.
  */
 
 public class DetailsDeviceActivity extends AppCompatActivity {
-
-    public static final String AplicationID = "6F3C8813-A0FC-71E2-FFCA-B5D5CDC6E200";
-    public static final String SecretKey = "9D7A1A98-8D7D-9B52-FF75-EEBBCFB18A00";
 
     TextView textdate;
     TextView textbuilding;

@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 /**
- * Created by hphanor on 11/20/2017.
+ * Created by tdugue on 11/20/2017.
  */
 
 public class InterventionInformation extends AppCompatActivity {
